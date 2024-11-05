@@ -103,8 +103,6 @@ add Revenue int
 update [dbo].[LITA _SalesData_TB]
 set Revenue = (quantity * unitprice)
 
-
-
 alter table [dbo].[LITA _SalesData_TB]
 add orderYear int
 alter table [dbo].[LITA _SalesData_TB]
