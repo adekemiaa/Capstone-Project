@@ -1,4 +1,4 @@
-![SALES CLEANING](https://github.com/user-attachments/assets/c0f858b4-28c1-4088-9946-cf73f2f90ca2)# Capstone-Project
+# Capstone-Project
 This is where i documented my analysis of the sales data in the CAPSTONE PROJECT given during my training with the Incubator Hub
 
 ### Project Title: SALES DATA and CUSTOMER SUBSCRIPTION DATA
