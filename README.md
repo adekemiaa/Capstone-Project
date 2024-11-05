@@ -1,4 +1,4 @@
-# Capstone-Project
+![SALES CLEANING](https://github.com/user-attachments/assets/c0f858b4-28c1-4088-9946-cf73f2f90ca2)# Capstone-Project
 This is where i documented my analysis of the sales data in the CAPSTONE PROJECT given during my training with the Incubator Hub
 
 ### Project Title: SALES DATA and CUSTOMER SUBSCRIPTION DATA
@@ -21,3 +21,15 @@ The main source of the data is through online (an open source) freely downloaded
   - For data queries
 3. Microsoft Power BI for
   - Data Cleaning, Analysis and Visualization
+
+### Data Cleaning and Preparations
+---
+In the initial phase of Data Cleaning and preparations. This was done on the data from Microsoft excel and Microsoft power BI, we perform the following 
+action;
+1.	Data loading and Inspection
+2.	Handling missing variables
+3.	Data Cleaning and formatting
+
+ ![SALES CLEANING](https://github.com/user-attachments/assets/e3feffd0-743c-4f2d-8823-75c85c926ba4)
+
+ ![CUSTOMER CLEANING](https://github.com/user-attachments/assets/5665ef20-7f91-4579-95f5-8e5d6a1ca9d2)
