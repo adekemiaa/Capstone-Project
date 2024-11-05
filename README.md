@@ -33,3 +33,7 @@ action;
  ![SALES CLEANING](https://github.com/user-attachments/assets/e3feffd0-743c-4f2d-8823-75c85c926ba4)
 
  ![CUSTOMER CLEANING](https://github.com/user-attachments/assets/5665ef20-7f91-4579-95f5-8e5d6a1ca9d2)
+
+### Data Analysis
+---
+Microsoft Excel and Microsoft power BI was used for the analysis
