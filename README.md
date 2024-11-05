@@ -89,5 +89,92 @@ SELECT SUM(CASE WHEN  Canceled = 0 THEN 1 ELSE 0 END) AS ActiveSubscriptions,
 SUM(CASE WHEN  Canceled = 1 THEN 1 ELSE 0 END) AS CnceledSubscriptions
 FROM [dbo].[LITA_CustomerData_TB]
 GROUP BY CustomerID
+```
 
-### 
+### Data Queries for Sales Data
+```SQL
+Create database PROJECT_DB
+Select * from [dbo].[LITA _SalesData_TB]
+Select * from [dbo].[LITA_CustomerData_TB]
+
+alter table [dbo].[LITA _SalesData_TB]
+add Revenue int
+
+update [dbo].[LITA _SalesData_TB]
+set Revenue = (quantity * unitprice)
+
+
+
+alter table [dbo].[LITA _SalesData_TB]
+add orderYear int
+alter table [dbo].[LITA _SalesData_TB]
+add orderMonth nvarchar (50)
+update [dbo].[LITA _SalesData_TB]
+set orderMonth = datename (month, orderDate)
+
+update [dbo].[LITA _SalesData_TB]
+set orderYear = year (OrderDate)
+
+-----NO 1. TO RETRIEVE TOTAL SALES FOR EACH PRODUCT----
+
+select product, sum(quantity * UnitPrice) as Sales_by_Product from [dbo].[LITA _SalesData_TB]
+group by product
+
+-----NO 2.  Find the number of sales transactions in each region----
+
+Select Region, sum(quantity) as SALE_TRANSACTION_BY_REGION from [dbo].[LITA _SalesData_TB]
+Group by Region 
+
+------NO 3...find the highest-selling product by total sales value----
+
+Select * from [dbo].[LITA _SalesData_TB]
+select product, sum(Quantity) as TotalSales from [dbo].[LITA _SalesData_TB]
+group by product
+order by sum(quantity) desc
+
+----NO 4...calculate total revenue per product. ---
+
+Select product, sum(revenue) as TOTAL_PRODUCT_REVENUE from [dbo].[LITA _SalesData_TB]
+Group by product
+
+----NO 5...calculate monthly sales totals for the current year----
+
+select  orderMonth, sum(quantity) as MonthlyTotalSales from [dbo].[LITA _SalesData_TB]
+where orderYear = 2024
+group by orderMonth
+order by orderMonth
+
+-----NO 6...find the top 5 customers by total purchase amount.----
+SELECT TOP 5  Customer_Id, sum(quantity) AS CUSTOMER_PURCHASE FROM [dbo].[LITA _SalesData_TB]
+group by Customer_Id
+order by sum(quantity) desc
+
+----NO 7: calculate the percentage of total sales contributed by each region-----
+SELECT * From [dbo].[LITA _SalesData_TB]
+
+SELECT Region, sum(Revenue)/sum(Quantity)*0.1 AS PERCENTAGE_OF_TotalSales 
+FROM [dbo].[LITA _SalesData_TB]
+GROUP BY region
+ORDER BY PERCENTAGE_OF_TotalSales desc
+
+------NO 8: identify products with no sales in the last quarter.-----
+
+Select Product, sum(Quantity) as Sales from  [dbo].[LITA _SalesData_TB]
+where month(OrderDate) between 9 and 12
+group by Product
+Having sum(quantity) = 0
+```
+
+### Data Visualization
+---
+
+![SALES 1](https://github.com/user-attachments/assets/87eb5912-5c30-4c08-8716-fb433d9cb5c6)
+
+![SALES 2](https://github.com/user-attachments/assets/f163f0eb-4dbc-4011-8f65-615de8ae54fd)
+
+![Customer 1](https://github.com/user-attachments/assets/29f81bc7-82bf-4dae-aabf-50208cd9d8ae)
+
+![CUSTOMER 2](https://github.com/user-attachments/assets/650ad840-5035-401e-893d-d1c2edebdce9)
+
+
+
