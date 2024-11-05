@@ -165,7 +165,6 @@ Having sum(quantity) = 0
 
 ### Data Visualization
 ---
-
 ![SALES 1](https://github.com/user-attachments/assets/87eb5912-5c30-4c08-8716-fb433d9cb5c6)
 
 ![SALES 2](https://github.com/user-attachments/assets/f163f0eb-4dbc-4011-8f65-615de8ae54fd)
