@@ -37,3 +37,8 @@ action;
 ### Data Analysis
 ---
 Microsoft Excel and Microsoft power BI was used for the analysis
+![Customer Analysis](https://github.com/user-attachments/assets/4e8e7f84-b0c8-4ea6-b6ab-33e2761d80cf)
+
+![Sales Analysis](https://github.com/user-attachments/assets/ab804993-d4c6-4522-810a-1a72a6736056)
+
+
